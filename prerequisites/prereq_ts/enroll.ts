@@ -1,7 +1,7 @@
 import { Connection, Keypair, PublicKey, SystemProgram } from "@solana/web3.js";
 import { Program, Wallet, AnchorProvider, Idl } from "@coral-xyz/anchor";
 import { IDL } from "./programs/Turbin3_prereq";
-import wallet from "../devnet1-base58-wallet.json";
+import wallet from "../../wallet/turbin3-wallet.json";
 
 // Import keypair from secret JSON
 const kp = Keypair.fromSecretKey(new Uint8Array(wallet));

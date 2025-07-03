@@ -8,7 +8,7 @@ import {
   PublicKey,
 } from "@solana/web3.js";
 
-import wallet from "../dev-wallet.json";
+import wallet from "../../wallet/dev-wallet.json";
 // import our dev wallet keypair from the wallet file
 const from = Keypair.fromSecretKey(new Uint8Array(wallet));
 // Define our Turbin3 Public key
