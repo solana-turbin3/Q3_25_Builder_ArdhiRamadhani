@@ -18,9 +18,9 @@ umi.use(irysUploader());
 umi.use(signerIdentity(signer));
 (async () => {
   try {
-    const imagePath = await readFile("./generug.png");
+    const imagePath = await readFile("./zzz.png");
 
-    const image = createGenericFile(imagePath, "generug.png", {
+    const image = createGenericFile(imagePath, "zzz.png", {
       contentType: "image/png",
     });
 
@@ -28,6 +28,6 @@ umi.use(signerIdentity(signer));
 
     console.log(`this was your uri ${myUri}`);
   } catch (err) {
-    console.log("Oops.. Something want wrong");
+    console.log("Oops.. Something went wrong", err);
   }
 })();
