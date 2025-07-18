@@ -18,9 +18,9 @@ umi.use(irysUploader());
 umi.use(signerIdentity(signer));
 (async () => {
   try {
-    const imagePath = await readFile("./zzz.png");
+    const imagePath = await readFile("./cluster1/nft.png");
 
-    const image = createGenericFile(imagePath, "zzz.png", {
+    const image = createGenericFile(imagePath, "nft.png", {
       contentType: "image/png",
     });
 
@@ -31,3 +31,5 @@ umi.use(signerIdentity(signer));
     console.log("Oops.. Something went wrong", err);
   }
 })();
+
+// https://gateway.irys.xyz/Az7T8w41ev6krDzb1PVLgfJe7oJobCdsBFjnrfF5uGCi

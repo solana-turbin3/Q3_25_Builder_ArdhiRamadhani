@@ -45,7 +45,7 @@ const to = new PublicKey(keypair2.publicKey);
       from.address,
       toWallet.address,
       keypair.publicKey,
-      100_000n
+      10_000_000n
     );
     console.log(`Success Transfering token: ${signature}`);
   } catch (e) {

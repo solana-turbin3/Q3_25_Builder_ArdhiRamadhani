@@ -18,10 +18,10 @@ umi.use(signerIdentity(signer));
 (async () => {
   try {
     const image =
-      "https://gateway.irys.xyz/8FfdKWZnvRFdq8j5Zyfu8saWA4JEZj6PWSUoLtLLctwM";
+      "https://gateway.irys.xyz/Az7T8w41ev6krDzb1PVLgfJe7oJobCdsBFjnrfF5uGCi";
 
     const metadata = {
-      name: "rugged",
+      name: "rugged NFT",
       symbol: "RGED",
       description: "RUGGED",
       image: image,
@@ -42,3 +42,5 @@ umi.use(signerIdentity(signer));
     console.log("Oops.. Something went wrong", error);
   }
 })();
+
+

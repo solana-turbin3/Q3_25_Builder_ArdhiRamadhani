@@ -26,8 +26,8 @@ const mint = generateSigner(umi);
 (async () => {
   let tx = createNft(umi, {
     mint,
-    name: "rugged",
-    uri: "https://gateway.irys.xyz/GdwtYjf2pFrRKRhaTTaPuobGFjJhJ4S4mDLdZ5ptQVjg",
+    name: "rugged NFT",
+    uri: "https://gateway.irys.xyz/3JS2U4gpVqsuDoKWNfx6CuvEXST35yQQd5jxMY1vy6LE",
     sellerFeeBasisPoints: percentAmount(5),
     symbol: "RGED",
   });
