@@ -234,6 +234,24 @@ describe("anchor-marketplace", () => {
     console.log("Transaction signature:", tx);
   });
 
+  // it("Delisting!", async () => {
+  //   const tx = await program.methods.delist()
+  //   .accountsPartial({
+  //     maker: maker.publicKey,
+  //     marketplace: marketplacePda,
+  //     makerMint: nftMint.publicKey,
+  //     makerAta,
+  //     listing,
+  //     vault,
+  //     systemProgram: anchor.web3.SystemProgram.programId,
+  //     tokenProgram: TOKEN_PROGRAM_ID,
+  //   })
+  //   .signers([maker])
+  //   .rpc();
+  //   console.log("\nDelisting NFT");
+  //   console.log("Transaction signature:", tx);
+  // });
+
   it("Purchase Initialized!", async () => {
     // Add your test here.
     const tx = await program.methods
