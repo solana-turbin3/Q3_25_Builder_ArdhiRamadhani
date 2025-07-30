@@ -69,7 +69,7 @@ describe("anchor-escrow", () => {
     )
     .flat();
 
-  // Fix: Use "offer" seed instead of "escrow"
+ 
   const offer = PublicKey.findProgramAddressSync(
     [
       Buffer.from("offer"),
@@ -79,7 +79,7 @@ describe("anchor-escrow", () => {
     program.programId
   )[0];
 
-  // Fix: Vault should be associated with offer PDA
+  
   const vault = getAssociatedTokenAddressSync(
     mintA.publicKey,
     offer,
@@ -87,20 +87,20 @@ describe("anchor-escrow", () => {
     tokenProgram
   );
 
-  // Fix: Use correct account names that match your program
+
   const accounts = {
     maker: maker.publicKey,
     taker: taker.publicKey,
-    tokenMintA: mintA.publicKey, // Fix: was mintA
-    tokenMintB: mintB.publicKey, // Fix: was mintB
-    makerTokenAccountA: makerAtaA, // Fix: was makerAtaA
-    makerTokenAccountB: makerAtaB, // Fix: was makerAtaB
-    takerTokenAccountA: takerAtaA, // Fix: was takerAtaA
-    takerTokenAccountB: takerAtaB, // Fix: was takerAtaB
-    offer: offer, // Fix: was escrow
+    tokenMintA: mintA.publicKey, 
+    tokenMintB: mintB.publicKey, 
+    makerTokenAccountA: makerAtaA, 
+    makerTokenAccountB: makerAtaB, 
+    takerTokenAccountA: takerAtaA, 
+    takerTokenAccountB: takerAtaB,
+    offer: offer,
     vault: vault,
-    associatedTokenProgram: ASSOCIATED_TOKEN_PROGRAM_ID, // Fix: Add this
-    systemProgram: SystemProgram.programId, // Fix: Add this
+    associatedTokenProgram: ASSOCIATED_TOKEN_PROGRAM_ID,
+    systemProgram: SystemProgram.programId, 
     tokenProgram,
   };
 
@@ -157,7 +157,6 @@ describe("anchor-escrow", () => {
   });
 
   it("Make Offer", async () => {
-    // Fix: Use correct method name from your lib.rs
     await program.methods
       .makeOffer(seed, new BN(1e6), new BN(1e6)) // Fix: was makeOffer
       .accounts({ ...accounts })
@@ -192,7 +191,7 @@ describe("anchor-escrow", () => {
         ),
         // Create maker's ATA for receiving tokenB
         createAssociatedTokenAccountIdempotentInstruction(
-          taker.publicKey, // taker pays for maker's ATA
+          taker.publicKey, 
           makerAtaB,
           maker.publicKey,
           mintB.publicKey,
@@ -204,7 +203,7 @@ describe("anchor-escrow", () => {
 
       // Now take the offer
       await program.methods
-        .takeOffer() // Fix: was takeOffer
+        .takeOffer() // F
         .accounts({ ...accounts })
         .signers([taker])
         .rpc()
