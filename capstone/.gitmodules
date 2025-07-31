@@ -1,3 +1,0 @@
-[submodule "payermint"]
-        path = payermint
-        url = https://github.com/Zenk41/payermint.git
